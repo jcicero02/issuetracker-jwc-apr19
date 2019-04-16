@@ -137,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "issuetracker"
+  "defaultProject": "issuetracker",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

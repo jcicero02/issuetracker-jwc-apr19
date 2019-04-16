@@ -1,0 +1,12 @@
+<div class="btn-group"
+     role="group"
+     aria-label="Basic example">
+  <button type="button"
+          [disabled]="(sortKey$ | async) === 'firstName'"
+          (click)="sortByFirstName()"
+          class="btn btn-secondary">Sort by First Name</button>
+  <button type="button"
+          [disabled]="(sortKey$ | async) === 'lastName'"
+          (click)="sortByLastName()"
+          class="btn btn-secondary">Sort by Last Name</button>
+</div>

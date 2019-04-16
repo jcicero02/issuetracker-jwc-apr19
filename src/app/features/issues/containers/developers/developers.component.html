@@ -3,6 +3,7 @@
     <app-developer-entry></app-developer-entry>
   </div>
   <div class="col">
-    <app-developer-list></app-developer-list>
+    <app-developer-list-sorter></app-developer-list-sorter>
+    <app-developer-list [developers]="devs$ | async"></app-developer-list>
   </div>
 </div>
