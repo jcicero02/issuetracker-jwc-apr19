@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { State, selectHasError, selectErrorMessage } from '../../reducers';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  hasError$: Observable<boolean>;
+  errorMessage$: Observable<string>;
+  constructor(private store: Store<State>) { }
 
   ngOnInit() {
+    this.hasError$ = this.store.select(selectHasError);
+    this.errorMessage$ = this.store.select(selectErrorMessage);
   }
 
 }

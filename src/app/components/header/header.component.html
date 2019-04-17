@@ -26,3 +26,8 @@
     </ul>
   </div>
 </nav>
+
+<div class="alert alert-danger"
+     *ngIf="(hasError$ | async)">
+  <h6>{{errorMessage$ | async}}</h6>
+</div>
